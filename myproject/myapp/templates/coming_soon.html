@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | Agri-Diagnose</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #333;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 450px;
+        }
+
+        .logo {
+            width: 70px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 25px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        input {
+            padding: 12px;
+            width: 70%;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: #0c7c3a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0f9647;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="../../static/images/fav.png" class="logo" alt="Agri-Diagnose Logo">
+
+        <h1>Coming Soon</h1>
+        <p>We’re working on the backend side.Stay tuned!</p>
+
+       <form method="POST">
+    {% csrf_token %}
+    <input type="email" name="email" placeholder="Your email" required>
+    <button type="submit">Notify</button>
+</form>
+
+{% if messages %}
+    {% for message in messages %}
+        <p style="color: green;">{{ message }}</p>
+    {% endfor %}
+{% endif %}
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% block tittle%}Home-Agri-Diagnose-Kenya{% endblock%}
+{% load static %}
+{% block content %}
+<div class="agri-hero">
+
+    <!-- Floating Leaves -->
+    <div class="leaf-container">
+        <img class="leaf" src="/myproject/static/images/leaf.png" style="left: 10%; animation-duration: 8s;">
+        <img class="leaf" src="/myproject/static/images/leaf.png" style="left: 30%; animation-duration: 11s;">
+        <img class="leaf" src="/myproject/static/images/leaf.png" style="left: 50%; animation-duration: 9s;">
+        <img class="leaf" src="/myproject/static/images/leaf.png" style="left: 70%; animation-duration: 13s;">
+        <img class="leaf" src="/myproject/static/images/leaf.png" style="left: 90%; animation-duration: 10s;">
+    </div>
+
+    <!-- Hero Content -->
+<div class="agri-content">
+    <h1 class="agri-title">AgriDiagnose Kenya</h1>
+    <p class="agri-text">AI-powered crop disease detection for real Kenyan farmers.</p>
+    <a href="{% url 'coming_soon' %}" class="agri-btn">Start Diagnosis</a>
+</div>
+</div>
+<div class="analytics-box container">
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="analytics-card">
+        <h4>Detection Accuracy</h4>
+        <p class="value">98.7%</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="analytics-card">
+        <h4>Diseases Identified</h4>
+        <p class="value">+35 Types</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="analytics-card">
+        <h4>Avg. Response Time</h4>
+        <p class="value">1.2 Seconds</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="how-section container">
+    <h2 class="section-title">How It Works</h2>
+
+    <div class="steps">
+        <div class="step">
+            <div class="step-icon">📷</div>
+            <h3>1. Take a Photo</h3>
+            <p>Capture or upload a clear photo of your crop leaf using your phone.</p>
+        </div>
+
+        <div class="step">
+            <div class="step-icon">🤖</div>
+            <h3>2. AI Analyzes</h3>
+            <p>Our AI instantly compares the leaf image with thousands of real Kenyan crop samples.</p>
+        </div>
+
+        <div class="step">
+            <div class="step-icon">🌿</div>
+            <h3>3. Get Diagnosis</h3>
+            <p>Receive accurate disease results and recommended treatments in seconds.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="features-section">
+    <h2 class="section-title">Why Farmers Love AgriDiagnose</h2>
+
+    <div class="features-grid container">
+
+        <div class="feature-box">
+            <div class="feature-icon">⚡</div>
+            <h4>Instant Results</h4>
+            <p>Diagnose crop diseases in under 5 seconds, anytime and anywhere.</p>
+        </div>
+
+        <div class="feature-box">
+            <div class="feature-icon">📍</div>
+            <h4>Kenyan-Crop Focused</h4>
+            <p>Trained on real maize, tomatoes, beans, potatoes, and more.</p>
+        </div>
+
+        <div class="feature-box">
+            <div class="feature-icon">💧</div>
+            <h4>Climate-Smart Advice</h4>
+            <p>Recommendations tailored to Kenyan rainfall and soil patterns.</p>
+        </div>
+
+        <div class="feature-box">
+            <div class="feature-icon">📊</div>
+            <h4>Easy to Use</h4>
+            <p>Simple interface built for farmers, even in low connectivity areas.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+    <h2 class="section-title">What Farmers Say</h2>
+
+    <div class="testimonials container">
+
+        <div class="testimonial-card">
+            <p class="testimonial-text">
+                “This app saved my entire tomato farm from blight. It detected the disease early!”
+            </p>
+            <h4>- Janet, Nakuru</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <p class="testimonial-text">
+                “Very easy to use. I diagnosed maize leaf spot in seconds.”
+            </p>
+            <h4>- Otieno, Kisumu</h4>
+        </div>
+
+        <div class="testimonial-card">
+            <p class="testimonial-text">
+                “Finally, an app that understands Kenyan crops. Perfect for small-scale farmers.”
+            </p>
+            <h4>- Wanjohi, Nyeri</h4>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+    <h2>Ready to Protect Your Crops?</h2>
+    <p>Start your first diagnosis now — it takes less than 5 seconds.</p>
+    <a href="#" class="cta-btn">Start Diagnosis</a>
+</section>
+
+
+{% endblock %}

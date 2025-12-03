@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% block tittle%}Research-Agri-Diagnose-Kenya{% endblock %}
+{% load static %}
+{% block content %}
+
+<!-- HERO -->
+<section class="research-hero">
+    <div class="hero-content">
+        <h1>Research & Innovation</h1>
+        <p>Building the future of AI-powered agriculture through science, data, and field expertise.</p>
+    </div>
+
+    <div class="leaf leaf1">🍃</div>
+    <div class="leaf leaf2">🌿</div>
+    <div class="leaf leaf3">🍃</div>
+</section>
+
+<!-- ABOUT OUR RESEARCH -->
+<section class="research-about container">
+    <h2 class="section-title">What Drives Our Research</h2>
+    <p class="section-subtitle">
+        We combine AI, plant pathology, agronomy, and climate intelligence to improve crop health for Kenyan farmers.
+    </p>
+
+    <div class="about-grid">
+        <div class="about-card">
+            <h3>Plant Disease Modeling</h3>
+            <p>
+                We collect and label thousands of Kenyan crop leaf images to train accurate disease recognition models
+                for maize, tomatoes, potatoes, beans, and horticultural crops.
+            </p>
+        </div>
+
+        <div class="about-card">
+            <h3>Climate-Smart Analytics</h3>
+            <p>
+                Our research integrates real weather data, soil patterns, and seasonal trends to deliver adaptive farming recommendations.
+            </p>
+        </div>
+
+        <div class="about-card">
+            <h3>Low-Data Machine Learning</h3>
+            <p>
+                We design AI models that work well with limited datasets and run smoothly on low-end Kenyan smartphones.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CURRENT PROJECTS -->
+<section class="projects container">
+    <h2 class="section-title">Current Research Projects</h2>
+
+    <div class="projects-grid">
+
+        <div class="project-card glass">
+            <h3>1. Kenyan Leaf Dataset Expansion</h3>
+            <p>
+                We are expanding our high-quality dataset of local crop diseases through collaborations with farmers, agronomists, and field agents.
+            </p>
+        </div>
+
+        <div class="project-card glass">
+            <h3>2. Pest & Disease Early Warning System</h3>
+            <p>
+                Building a predictive model that forecasts pest outbreaks using climate patterns and field reports.
+            </p>
+        </div>
+
+        <div class="project-card glass">
+            <h3>3. Offline AI Diagnosis</h3>
+            <p>
+                Researching lightweight AI models that run without internet — useful for remote farming regions.
+            </p>
+        </div>
+
+        <div class="project-card glass">
+            <h3>4. Fertilizer Optimization AI</h3>
+            <p>
+                Creating smart fertilizer plans using soil type, rainfall history, and crop stage to reduce waste and increase yield.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners-section">
+    <div class="container">
+        <h2 class="section-title">Our Research Partners</h2>
+
+        <div class="partners-grid">
+
+            <div class="partner-card">
+                <h3>Kenyan Agronomists</h3>
+                <p>Provide disease verification, field testing, and treatment recommendations.</p>
+            </div>
+
+            <div class="partner-card">
+                <h3>Universities</h3>
+                <p>Collaborate on data collection, AI model design, and climate pattern analysis.</p>
+            </div>
+
+            <div class="partner-card">
+                <h3>AI & Data Labs</h3>
+                <p>Support ongoing development of computer vision, deep learning, and optimization systems.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <h2>Want to Collaborate with Agri-Diagnose?</h2>
+    <p>We welcome partnerships in AI, agriculture, and research innovation.</p>
+    <a href="{% url 'contact' %}" class="cta-btn">Contact Us</a>
+</section>
+{% endblock %}

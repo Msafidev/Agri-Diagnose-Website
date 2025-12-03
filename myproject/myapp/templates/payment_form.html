@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block tittle%}Home-Agri-Diagnose-Kenya{% endblock%}
+{% load static %}
+{% block content %}
+
+
+<form action="" method="POST" class="payment-form" id="mpesaForm">
+    {% csrf_token %}
+
+    <div class="mpesa-header">
+        <img src="{% static 'images/mpesa.png' %}" class="mpesa-logo" alt="MPESA">
+        <h3>Pay with M-PESA</h3>
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" placeholder="07xxxxxxxx" required>
+    </div>
+
+    <div class="form-group">
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+    </div>
+
+    <button type="submit" class="pay-btn" id="payBtn">
+        <span class="btn-text">PAY NOW</span>
+        <span class="loader"></span>
+    </button>
+</form>
+
+
+{% endblock %}
