@@ -144,3 +144,4 @@ GOOGLE_PLACES_API_KEY = 'YOUR_GOOGLE_API_KEY_HERE'  # Get free from Google Cloud
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+

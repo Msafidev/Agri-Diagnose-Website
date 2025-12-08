@@ -1112,3 +1112,31 @@ body {
         background: #147627;
     }
 
+
+
+    .btn-diagnose-again {
+    display: inline-block;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 16px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-diagnose-again:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(40, 167, 69, 0.4);
+    background: linear-gradient(135deg, #218838, #1ba483);
+    color: white;
+    text-decoration: none;
+}
+
+.text-center {
+    text-align: center;
+}
+

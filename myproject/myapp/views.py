@@ -34,6 +34,9 @@ def result(request):
 def technology(request):
     return render(request, 'technology.html')
 
+def start(request):
+    return render(request, 'start.html')
+
 def coming_soon(request):
     if request.method == 'POST':
         email = request.POST.get('email')
@@ -172,16 +175,24 @@ def predict_disease(request):
 # ============================= SAVE RESULT =============================
 def save_diagnosis(request):
     if request.method == "POST":
+        image = request.FILES.get('image')
+        disease = request.POST.get('disease')           # ← must be 'disease'
+        confidence = request.POST.get('confidence')
+        latitude = request.POST.get('latitude') or None
+        longitude = request.POST.get('longitude') or None
+
+        if not all([image, disease, confidence]):
+            return JsonResponse({"error": "Missing data"}, status=400)
+
         Diagnosis.objects.create(
-            image=request.FILES['image'],
-            predicted_label=request.POST.get('predicted_label'),
-            confidence=request.POST.get('confidence'),
-            lat=request.POST.get('lat'),
-            lon=request.POST.get('lon')
+            disease=disease,
+            confidence=confidence,
+            latitude=latitude,
+            longitude=longitude,
+            image=image
         )
-        return redirect('result')
-    return redirect('start_diagnosis')
+        return JsonResponse({"status": "success"})
+
+    return JsonResponse({"error": "POST required"}, status=405)
 
 
-def start(request):
-    return render(request, 'start.html')

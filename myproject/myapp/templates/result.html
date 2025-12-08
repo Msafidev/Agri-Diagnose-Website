@@ -24,11 +24,11 @@
             <strong>{{ agrovet.name }}</strong><br>
             Distance: ~{{ agrovet.distance|default:"Nearby" }} km
         </p>
+        <div><a href="{% url 'start' %}" class="btn-back">Diagnose Another Image</a></div>
         <div id="map"></div>
     </div>
     {% endif %}
 
-    <a href="{% url 'start' %}" class="btn-back">Diagnose Another Image</a>
 
 </div>
 

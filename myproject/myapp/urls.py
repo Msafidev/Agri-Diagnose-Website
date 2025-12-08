@@ -15,7 +15,7 @@ urlpatterns = [
     path("save", views.save_diagnosis, name="save_diagnosis"),
     path("result/<int:pk>", views.result, name="result_page"),
 
-    path("diagnosis/save", views.save_diagnosis, name="save_diagnosis"),
+    path("save_diagnosis", views.save_diagnosis, name="save_diagnosis"),
 
     path('diagnose/start/', views.start_diagnosis, name='start_diagnosis'),
     path('api/predict/', views.predict_disease, name='predict_disease'),
