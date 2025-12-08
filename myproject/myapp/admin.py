@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Subscriber
-from .models import ContactMessage
+from .models import Subscriber, ContactMessage
 
 @admin.register(Subscriber)
 class SubscriberAdmin(admin.ModelAdmin):
@@ -15,4 +14,9 @@ class ContactMessageAdmin(admin.ModelAdmin):
     list_filter = ("created_at",)
     ordering = ("-created_at",)
 
-# Register your models here.
+
+# @admin.register(Diagnosis)
+# class DiagnosisAdmin(admin.ModelAdmin):
+#     list_display = ("predicted_label", "confidence", "timestamp", "lat", "lon")
+#     search_fields = ("predicted_label",)
+#     list_filter = ("timestamp",)

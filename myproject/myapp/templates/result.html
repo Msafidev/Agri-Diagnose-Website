@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block tittle%} Results | Agri-Diagnose-Kenya{% endblock %}
+{% load static %}
+{% block content %}
+
+<div class="result-container">
+
+    <h2 class="diagnosis-title">AI Diagnosis Result</h2>
+
+    <img src="{{ diag.image.url }}" class="img-preview-result">
+
+    <div class="disease-label">{{ diag.predicted_label }}</div>
+    <div class="conf-label">Accuracy: {{ diag.confidence }}%</div>
+
+    <div class="section-box">
+        <h4>Recommended Treatment</h4>
+        <p>{{ treatment }}</p>
+    </div>
+
+    {% if agrovet %}
+    <div class="section-box">
+        <h4>Nearest Agrovet</h4>
+        <p>
+            <strong>{{ agrovet.name }}</strong><br>
+            Distance: ~{{ agrovet.distance|default:"Nearby" }} km
+        </p>
+        <div id="map"></div>
+    </div>
+    {% endif %}
+
+    <a href="{% url 'start' %}" class="btn-back">Diagnose Another Image</a>
+
+</div>
+
+{% endblock %}

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block tittle%}Home-Agri-Diagnose-Kenya{% endblock%}
+{% block tittle%}Home | Agri-Diagnose-Kenya{% endblock%}
 {% load static %}
 {% block content %}
 <div class="agri-hero">
@@ -17,7 +17,7 @@
 <div class="agri-content">
     <h1 class="agri-title">AgriDiagnose Kenya</h1>
     <p class="agri-text">AI-powered crop disease detection for real Kenyan farmers.</p>
-    <a href="{% url 'coming_soon' %}" class="agri-btn">Start Diagnosis</a>
+    <a href="{% url 'start' %}" class="agri-btn">Start Diagnosis</a>
 </div>
 </div>
 <div class="analytics-box container">
@@ -137,7 +137,7 @@
 <section class="cta-section">
     <h2>Ready to Protect Your Crops?</h2>
     <p>Start your first diagnosis now — it takes less than 5 seconds.</p>
-    <a href="#" class="cta-btn">Start Diagnosis</a>
+    <a href="{% url 'start' %}" class="cta-btn">Start Diagnosis</a>
 </section>
 
 

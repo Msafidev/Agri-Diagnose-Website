@@ -390,12 +390,57 @@
    FOOTER SECTION
 ========================================= */
 .footer {
-    text-align: center;
-    padding: 25px 0;
-    background: #0d3b12;
-    color: #ccffcc;
-    margin-top: 0;
-}
+        background: #0b3d0b;
+        padding: 40px 20px;
+        color: #e6ffe6;
+        text-align: center;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+        margin-top: 50px;
+    }
+
+    .footer p {
+        margin: 6px 0;
+        font-size: 15px;
+        opacity: 0.9;
+    }
+
+    .footer .social-icons {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .footer .social-icons a {
+        color: white;
+        font-size: 22px;
+        transition: 0.3s;
+    }
+
+    .footer .social-icons a:hover {
+        color: #80ff80;
+        transform: scale(1.2);
+    }
+
+    .creator {
+        margin-top: 20px;
+        font-size: 14px;
+        opacity: 0.8;
+    }
+
+    .creator a {
+        color: #9aff9a;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .creator a:hover {
+        color: #c4ffc4;
+        text-decoration: underline;
+    }
 
 /*technology section*/
 /* GENERAL */
@@ -752,4 +797,318 @@ body {
 .pay-btn:hover {
     background: #276749;
 }
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+#loading-image {
+    width: 120px;
+    animation: pulse 4s infinite ease-in-out;
+}
+
+/* Soft pulsing animation */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.15);
+        opacity: 0.8;
+    }
+}
+    #loading-image {
+        width: 130px; /* adjust size */
+        animation: pulse 1s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); opacity: 0.7; }
+        50% { transform: scale(1.1); opacity: 1; }
+        100% { transform: scale(1); opacity: 0.7; }
+    }
+
+    .fade-out {
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.7s ease;
+    }
+
+
+    /* ===== Page Header ===== */
+.diagnosis-header {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #0b6623; /* African green */
+    animation: fadeDown 0.6s ease-in-out;
+}
+
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Card Container ===== */
+.diagnosis-card {
+    max-width: 650px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: 0.3s ease;
+
+}
+
+.upload-section,h5{
+    padding: 20px;
+    text-align: center;
+}
+.diagnosis-header {
+    padding: 100px 0 35px 0;
+    line-height: 0.3px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.diagnosis-card:hover {
+    transform: translateY(-3px);
+}
+
+/* ===== Card Body ===== */
+.card-body-modern {
+    padding: 10px 5px;
+}
+
+/* ===== Upload Section ===== */
+.upload-section h5 {
+    font-weight: 600;
+    color: #0b6623;
+    margin-bottom: 12px;
+}
+
+.custom-file-input {
+    width: 100%;
+    border: 2px dashed #0b6623;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    background: rgba(11,102,35,0.05);
+}
+
+.custom-file-input:hover {
+    background: rgba(11,102,35,0.12);
+    border-color: #088c32;
+}
+
+.custom-file-input input {
+    display: none;
+}
+
+.upload-label-text {
+    font-weight: 600;
+    color: #0b6623;
+    font-size: 1.1rem;
+}
+
+/* ===== Image Preview ===== */
+#preview {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 12px;
+    margin-top: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+/* ===== Loader Section ===== */
+.loader-modern {
+    display: none;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.loader-modern p {
+    margin-top: 10px;
+    color: #0b6623;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+/* ===== Buttons ===== */
+.btn-group-modern {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.btn-location, .btn-predict {
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    letter-spacing: .5px;
+    transition: 0.25s;
+}
+
+.btn-location {
+    background: #f0f8f4;
+    color: #0b6623;
+    border: 2px solid #0b6623;
+}
+
+.btn-location:hover {
+    background: #0b6623;
+    color: #fff;
+}
+
+.btn-predict {
+    background: #0b6623;
+    color: white;
+    opacity: .8;
+}
+
+.btn-predict:enabled {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.btn-predict:hover:enabled {
+    background: #088c32;
+}
+
+/* ===== Result Section ===== */
+.result-section {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f1fff4;
+    border-left: 6px solid #0b6623;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#predConfidence {
+    text-align: center;
+    color: #0b6623;
+    font-weight: 600;
+}
+
+/* ===== Submit Button ===== */
+.btn-submit-diagnosis {
+    background: #0b6623;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: 700;
+    display: block;
+    margin: 20px auto 0 auto;
+    transition: 0.25s ease;
+    border: none;
+}
+
+.btn-submit-diagnosis:hover {
+    background: #088c32;
+}
+
+.result-container {
+        max-width: 700px;
+        margin: 40px auto;
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        animation: fadeInUp 0.7s ease;
+    }
+
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .diagnosis-title {
+        font-size: 26px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .disease-label {
+        font-size: 22px;
+        font-weight: bold;
+        color: #1c8f36;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    .conf-label {
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: #444;
+    }
+
+    .img-preview-result {
+        width: 100%;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.08);
+    }
+
+    .section-box {
+        background: #f8fdf8;
+        border-left: 5px solid #1c8f36;
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    #map {
+        height: 300px;
+        margin-top: 15px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+
+    .btn-back {
+        display: block;
+        width: 100%;
+        background: #1c8f36;
+        color: white;
+        padding: 12px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 25px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .btn-back:hover {
+        background: #147627;
+    }
 
